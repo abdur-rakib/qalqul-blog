@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Route, Routes, Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Post from "./pages/Post";
+import { getPosts } from "./api/posts";
 
 const App = () => {
+  // get posts
+  useEffect(() => {
+    getPosts();
+  }, []);
   return (
     <>
       {/* nav */}

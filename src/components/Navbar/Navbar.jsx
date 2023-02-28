@@ -9,12 +9,12 @@ const Navbar = () => {
       {/* <div className={`${styles.nav} ${styles.container}`}> */}
       <div className={styles.nav}>
         {/* <!-- header title --> */}
-        <Link to="/" className="title">
+        <Link to="/" className={styles.title}>
           QULQAL Blog
         </Link>
         {/* <!-- nav items --> */}
-        <div className="nav-items">
-          <Link to="/profile" className="nav-item">
+        <div className={styles.nav_items}>
+          <Link to="/profile" className={styles.nav_item}>
             Profile
           </Link>
         </div>

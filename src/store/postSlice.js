@@ -9,7 +9,9 @@ export const postSlice = createSlice({
   name: "post",
   initialState,
   reducers: {
-    setPosts: (state) => {},
+    setPosts: (state, action) => {
+      state.posts = action.payload;
+    },
     likePost: (state) => {},
     unlikePost: (state) => {},
   },
