@@ -21,6 +21,9 @@ const App = () => {
           <Route path="/:postId" element={<Post />} />
         </Routes>
       </section>
+      <footer>
+        <p class="copyright">QALQUL Blog © 2022</p>
+      </footer>
     </>
   );
 };
