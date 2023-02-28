@@ -1,0 +1,33 @@
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--page-background);
+  width: 100%;
+}
+
+.nav {
+  max-width: 768px;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.title {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-item {
+  text-transform: uppercase;
+}
