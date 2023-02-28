@@ -22,7 +22,7 @@ const App = () => {
         </Routes>
       </section>
       <footer>
-        <p class="copyright">QALQUL Blog © 2022</p>
+        <p className="copyright">QALQUL Blog © 2022</p>
       </footer>
     </>
   );

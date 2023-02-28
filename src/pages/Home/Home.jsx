@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className={styles.post_container}>
       {posts.map((post) => (
-        <SinglePost post={post} />
+        <SinglePost key={post._id} post={post} />
       ))}
     </div>
   );

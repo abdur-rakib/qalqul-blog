@@ -12,12 +12,19 @@ export const postSlice = createSlice({
     setPosts: (state, action) => {
       state.posts = action.payload;
     },
-    likePost: (state) => {},
-    unlikePost: (state) => {},
+    toggleLikePost: (state, action) => {
+      // get liked post
+      const postIndex = state.posts.findIndex(
+        (post) => post._id == action.payload
+      );
+      state.posts[postIndex].liked = !state.posts[postIndex].liked;
+
+      // add post to likedPosts or remove it from likedPosts
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { setPosts, likePost, unlikePost } = postSlice.actions;
+export const { setPosts, toggleLikePost } = postSlice.actions;
 
 export default postSlice.reducer;

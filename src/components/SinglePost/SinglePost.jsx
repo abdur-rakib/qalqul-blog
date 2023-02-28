@@ -1,9 +1,13 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { toggleLikePost } from "../../store/postSlice";
 import { capitalize, truncate } from "../../utils";
 import styles from "./SinglePost.module.css";
 
 const SinglePost = ({ post }) => {
+  // redux staff
+  const dispatch = useDispatch();
   return (
     <div className={styles.post_box}>
       <div>
@@ -23,8 +27,11 @@ const SinglePost = ({ post }) => {
       <Link to={`/${post._id}`} state={{ post }} className={styles.post_body}>
         {truncate(post.description, 200)} ...
       </Link>
-      <div className={styles.post_action}>
-        <p className={styles.action_text}>Like</p>
+      <div
+        className={styles.post_action}
+        onClick={() => dispatch(toggleLikePost(post._id))}
+      >
+        <p className={styles.action_text}>{post.liked ? "Unlike" : "Like"}</p>
       </div>
     </div>
   );
