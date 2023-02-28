@@ -3,5 +3,5 @@ export const truncate = (string, value) => {
 };
 
 export const capitalize = (string) => {
-  return;
+  return string.charAt(0).toUpperCase() + string.slice(1);
 };

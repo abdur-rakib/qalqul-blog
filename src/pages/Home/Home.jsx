@@ -7,13 +7,11 @@ const Home = () => {
   // redux staff
   const { posts } = useSelector((state) => state.post);
   return (
-    <section className={styles.main_container}>
-      <div className={styles.post_container}>
-        {posts.map((post) => (
-          <SinglePost post={post} />
-        ))}
-      </div>
-    </section>
+    <div className={styles.post_container}>
+      {posts.map((post) => (
+        <SinglePost post={post} />
+      ))}
+    </div>
   );
 };
 

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Route, Routes, Link } from "react-router-dom";
+import "./App.css";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Post from "./pages/Post";
@@ -14,10 +15,12 @@ const App = () => {
     <>
       {/* nav */}
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/:postId" element={<Post />} />
-      </Routes>
+      <section className="main_container">
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/:postId" element={<Post />} />
+        </Routes>
+      </section>
     </>
   );
 };

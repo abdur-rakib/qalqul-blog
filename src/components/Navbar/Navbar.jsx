@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className={styles.nav}>
         {/* <!-- header title --> */}
         <Link to="/" className={styles.title}>
-          QULQAL Blog
+          QALQUL Blog
         </Link>
         {/* <!-- nav items --> */}
         <div className={styles.nav_items}>
