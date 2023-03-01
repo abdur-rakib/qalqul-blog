@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Post from "./pages/Post";
 import { getPosts } from "./api/posts";
+import Profile from "./pages/Profile";
 
 const App = () => {
   // get posts
@@ -17,7 +18,8 @@ const App = () => {
       <Navbar />
       <section className="main_container">
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/:postId" element={<Post />} />
         </Routes>
       </section>

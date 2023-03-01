@@ -8,8 +8,6 @@ const Post = () => {
   const {
     state: { post },
   } = location;
-
-  console.log(post.comments);
   return (
     <div className={styles.post_box}>
       {/* post info part */}
@@ -30,7 +28,7 @@ const Post = () => {
         <div className={styles.comments}>
           {post.comments.length > 0 ? (
             post.comments.map((comment) => (
-              <div className={styles.single_comment}>
+              <div key={comment._id} className={styles.single_comment}>
                 <p className={styles.user_name}>
                   {comment.user}{" "}
                   <span className={styles.comment_date}>
