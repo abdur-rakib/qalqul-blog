@@ -6,11 +6,15 @@ import Home from "./pages/Home";
 import Post from "./pages/Post";
 import { getPosts } from "./api/posts";
 import Profile from "./pages/Profile";
+import { getUser } from "./api/user";
 
 const App = () => {
   // get posts
   useEffect(() => {
+    // get posts
     getPosts();
+    // get user data
+    getUser();
   }, []);
   return (
     <>
