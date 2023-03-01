@@ -17,6 +17,10 @@ header {
   padding: 15px;
 }
 
+.active {
+  text-decoration: underline;
+}
+
 .title {
   font-size: 20px;
   text-transform: uppercase;

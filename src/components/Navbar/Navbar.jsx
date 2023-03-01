@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
@@ -9,14 +9,21 @@ const Navbar = () => {
       {/* <div className={`${styles.nav} ${styles.container}`}> */}
       <div className={styles.nav}>
         {/* <!-- header title --> */}
-        <Link to="/" className={styles.title}>
+        <NavLink to="/" className={styles.title}>
           QALQUL Blog
-        </Link>
+        </NavLink>
         {/* <!-- nav items --> */}
         <div className={styles.nav_items}>
-          <Link to="/profile" className={styles.nav_item}>
+          <NavLink
+            to="/profile"
+            className={({ isActive }) =>
+              [styles.nav_item, isActive ? styles.active : null]
+                .filter(Boolean)
+                .join(" ")
+            }
+          >
             Profile
-          </Link>
+          </NavLink>
         </div>
       </div>
     </header>
