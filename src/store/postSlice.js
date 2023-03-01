@@ -20,6 +20,13 @@ export const postSlice = createSlice({
       state.posts[postIndex].liked = !state.posts[postIndex].liked;
 
       // add post to likedPosts or remove it from likedPosts
+      if (state.posts[postIndex].liked) {
+        state.likedPosts = [state.posts[postIndex], ...state.likedPosts];
+      } else {
+        state.likedPosts = state.likedPosts.filter(
+          (post) => post._id !== action.payload
+        );
+      }
     },
   },
 });
