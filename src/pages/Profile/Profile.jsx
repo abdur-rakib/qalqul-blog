@@ -5,11 +5,27 @@ import styles from "./Profile.module.css";
 
 const Profile = () => {
   const { likedPosts } = useSelector((state) => state.post);
+  const { userData } = useSelector((state) => state.user);
   console.log("🚀 ~ file: Profile.jsx:7 ~ Profile ~ likedPosts:", likedPosts);
   return (
     <div className={styles.profile_box}>
       {/* user container */}
-      <div className={styles.user_container}></div>
+      <div className={styles.user_container}>
+        <div className={styles.image_container}>
+          <img
+            src={userData.avatarUrl}
+            alt="profile_picture"
+            className={styles.image}
+          />
+        </div>
+        <div className={styles.info_container}>
+          <p className={styles.name}>
+            {userData.firstName} {userData.lastName}
+          </p>
+          <p className={styles.info_data}>{userData.phoneNumber}</p>
+          <p className={styles.info_data}>{userData.emailAddress}</p>
+        </div>
+      </div>
       {/* liked post container */}
       <div className={styles.post_container}>
         <p className={styles.title}>Liked Posts</p>
