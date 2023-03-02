@@ -48,6 +48,11 @@ const Post = () => {
         Posted on {post.created_at.split("T")[0]}
       </p>
       <p className={styles.post_body}>{post.description}</p>
+      <div className={styles.tags_container}>
+        {post.tags.map((tag) => (
+          <p className={styles.tag}>{tag}</p>
+        ))}
+      </div>
       {/* comment part */}
       <div className={styles.comment_container}>
         <h1>Leave a comment</h1>

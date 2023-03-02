@@ -92,3 +92,15 @@
   font-size: 18px;
   text-align: center;
 }
+
+.tags_container {
+  display: flex;
+  border-bottom: 1px solid white;
+  padding: 10px 0 20px 0;
+  margin-bottom: 10px;
+}
+.tag {
+  margin-right: 10px;
+  border: 1px solid white;
+  padding: 5px;
+}

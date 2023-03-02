@@ -6,7 +6,6 @@ import styles from "./Profile.module.css";
 const Profile = () => {
   const { likedPosts } = useSelector((state) => state.post);
   const { userData } = useSelector((state) => state.user);
-  console.log("🚀 ~ file: Profile.jsx:7 ~ Profile ~ likedPosts:", likedPosts);
   return (
     <div className={styles.profile_box}>
       {/* user container */}

@@ -27,6 +27,11 @@ const SinglePost = ({ post }) => {
       <Link to={`/${post._id}`} state={{ post }} className={styles.post_body}>
         {truncate(post.description, 200)} ...
       </Link>
+      <div className={styles.tags_container}>
+        {post.tags.map((tag) => (
+          <p className={styles.tag}>{tag}</p>
+        ))}
+      </div>
       <div
         className={styles.post_action}
         onClick={() => dispatch(toggleLikePost(post._id))}

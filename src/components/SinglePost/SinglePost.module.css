@@ -43,3 +43,13 @@
   font-size: 18px;
   text-align: center;
 }
+
+.tags_container {
+  display: flex;
+  padding: 10px 0 5px 0;
+}
+.tag {
+  margin-right: 10px;
+  border: 1px solid white;
+  padding: 5px;
+}
