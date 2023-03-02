@@ -28,10 +28,21 @@ export const postSlice = createSlice({
         );
       }
     },
+    postComment: (state, action) => {
+      const postId = action.payload.postId;
+      const commentData = action.payload.commentData;
+      // get post
+      const postIndex = state.posts.findIndex((post) => post._id == postId);
+
+      state.posts[postIndex].comments = [
+        commentData,
+        ...state.posts[postIndex].comments,
+      ];
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { setPosts, toggleLikePost } = postSlice.actions;
+export const { setPosts, toggleLikePost, postComment } = postSlice.actions;
 
 export default postSlice.reducer;
