@@ -28,8 +28,10 @@ const SinglePost = ({ post }) => {
         {truncate(post.description, 200)} ...
       </Link>
       <div className={styles.tags_container}>
-        {post.tags.map((tag) => (
-          <p className={styles.tag}>{tag}</p>
+        {post.tags.map((tag, index) => (
+          <p key={index} className={styles.tag}>
+            {tag}
+          </p>
         ))}
       </div>
       <div

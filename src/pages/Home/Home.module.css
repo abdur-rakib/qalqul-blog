@@ -1,3 +1,7 @@
 .post_container {
   padding: 0 15px;
 }
+.empty {
+  margin: 20px 0;
+  text-align: center;
+}

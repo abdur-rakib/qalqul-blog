@@ -49,8 +49,10 @@ const Post = () => {
       </p>
       <p className={styles.post_body}>{post.description}</p>
       <div className={styles.tags_container}>
-        {post.tags.map((tag) => (
-          <p className={styles.tag}>{tag}</p>
+        {post.tags.map((tag, index) => (
+          <p key={index} className={styles.tag}>
+            {tag}
+          </p>
         ))}
       </div>
       {/* comment part */}

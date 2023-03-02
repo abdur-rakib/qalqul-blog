@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   posts: [],
   likedPosts: [],
+  searchText: "",
 };
 
 export const postSlice = createSlice({
@@ -39,10 +40,14 @@ export const postSlice = createSlice({
         ...state.posts[postIndex].comments,
       ];
     },
+    setSearchText: (state, action) => {
+      state.searchText = action.payload;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { setPosts, toggleLikePost, postComment } = postSlice.actions;
+export const { setPosts, toggleLikePost, postComment, setSearchText } =
+  postSlice.actions;
 
 export default postSlice.reducer;

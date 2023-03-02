@@ -1,8 +1,13 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
+import { setSearchText } from "../../store/postSlice";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
+  // redux staff
+  const { searchText } = useSelector((state) => state.post);
+  const dispatch = useDispatch();
   return (
     // header
     <header>
@@ -13,6 +18,14 @@ const Navbar = () => {
           QALQUL Blog
         </NavLink>
         {/* <!-- nav items --> */}
+        {/* search input */}
+        <input
+          type="text"
+          className={styles.input}
+          placeholder="Search by tag"
+          value={searchText}
+          onChange={(e) => dispatch(setSearchText(e.target.value))}
+        />
         <div className={styles.nav_items}>
           <NavLink
             to="/profile"

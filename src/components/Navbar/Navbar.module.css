@@ -35,3 +35,9 @@ header {
 .nav_item {
   text-transform: uppercase;
 }
+
+.input {
+  width: 200px;
+  height: 30px;
+  padding: 0 10px;
+}
